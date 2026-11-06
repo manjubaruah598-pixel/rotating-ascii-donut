@@ -1,3 +1,7 @@
+// ROTATING ASCII DONUT
+// A C++ program that animates a rotating 3D donut in the terminal.
+// Run the program to see the donut rotate, drawn with ASCII characters.
+
 #include <iostream>
 #include <vector>
 #include <cmath>
