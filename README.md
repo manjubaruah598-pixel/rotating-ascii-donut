@@ -1,33 +1,71 @@
-# ASCII Art Projects
+# ASCII Vision & Terminal Art
 
-This repository contains two small programs that turn visuals into ASCII art:
+This repository is a small collection of experimental computer-vision and terminal-art projects created for learning and fun.
 
-- **`main.cpp`** — animates a rotating 3D donut in the terminal.
-- **`main.py`** — turns a live webcam feed into ASCII art in the terminal.
+## Included projects
 
-## Python ASCII camera
+- `main.cpp` — a rotating 3D ASCII donut animation that runs in the Windows terminal.
+- `main.py` — a menu-based program with two modes:
+  - ASCII webcam viewer
+  - offline face tracker using skin-color detection and simple contour filtering
+- `face.py` — standalone face-tracking demo focused on the real-time face detection logic.
 
-You need Python, a webcam, and OpenCV. Install OpenCV with:
+## Face tracker note
+
+`face.py` is a beginner-friendly OpenCV project designed to help understand:
+
+- HSV color filtering
+- mask cleanup using morphological operations
+- contour detection
+- bounding-box tracking for a face-like region
+
+This is not a production-grade face-recognition system. It is a simple offline demo built for learning how computer vision works in practice.
+
+## Requirements
+
+### Python
 
 ```bash
 python -m pip install opencv-python
 ```
 
-Run the camera program with:
+### C++
+
+A Windows C++ compiler such as MinGW or MSVC is required.
+
+## Run the Python programs
+
+From the repository folder:
 
 ```bash
 python main.py
 ```
 
-Allow camera access if your computer asks. The program uses the default camera and mirrors its image. Press **q** to quit.
+Then choose one of the options:
 
-## C++ rotating donut
+- `1` for the ASCII camera
+- `2` for the face tracker
 
-The C++ program uses the Windows API (`Sleep`), so it is intended for Windows. With a C++ compiler such as MinGW installed, compile and run it from Command Prompt or PowerShell:
+To run only the face tracker demo:
+
+```bash
+python face.py
+```
+
+## Run the C++ donut program
 
 ```powershell
 g++ main.cpp -o donut.exe
 .\donut.exe
 ```
 
-Press **Ctrl+C** in the terminal to stop the animation.
+Press `Ctrl+C` or close the terminal to stop the animation.
+
+## Project goals
+
+This repository is meant to demonstrate how creative coding can be done with:
+
+- terminal rendering
+- live camera processing
+- OpenCV-based experimentation
+- beginner-friendly computer vision workflows
