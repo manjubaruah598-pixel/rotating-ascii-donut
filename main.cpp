@@ -1,4 +1,4 @@
-// ROTATING ASCII DONUT
+// Preview: Rotating Donut Code in C++
 // A C++ program that animates a rotating 3D donut in the terminal.
 // Run the program to see the donut rotate, drawn with ASCII characters.
 
